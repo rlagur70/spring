@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="bmicalculator" class="com.koreait.quiz1.BMICalculator"/>
+
+<bean id="person" class="com.koreait.quiz1.Person">
+	<property name="name" value="앨리스"></property>
+	<property name="weight" value="165.5"></property>
+	<property name="height" value="55.5"></property>
+	<property name="bmiCalculator" ref="BMICalculator"></property>
+	<property name="hobbies" >
+		<array>
+			<value>운동</value>
+			<value>여행</value>
+			<value>독서</value>
+		</array>	
+	</property>
+</bean>
+
+</beans>
